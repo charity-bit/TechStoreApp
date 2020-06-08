@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"            
+             xmlns:icons="clr-namespace:TechStore.Fonts"
+             xmlns:vm="clr-namespace:TechStore.ViewModel"
+             xmlns:views="clr-namespace:TechStore.Views"
+             mc:Ignorable="d"
+             x:Class="TechStore.Views.OverviewPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Black}"
+             x:Name="RootPage"
+             >
+    <ContentPage.BindingContext>
+        <vm:OverViewViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid Padding="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="*" />
+
+            </Grid.RowDefinitions>
+            <Entry x:Name="entry" PlaceholderColor="{StaticResource yellow}" 
+                   HorizontalTextAlignment="Center"
+                   HeightRequest="35" Placeholder="Search"  TextChanged="entry_TextChanged"
+                   HorizontalOptions="CenterAndExpand" WidthRequest="200"  TextColor="{StaticResource yellow}"
+                   VerticalOptions="Center" Grid.Row="0" Grid.RowSpan="1" FontSize="14" 
+                   TranslationX="{Binding Source={x:Reference RootPage}, Path=Width}" />
+          
+            <Button  x:Name="Cancel"  WidthRequest="50"  Margin="-10,0,0,0"
+                     Text="{x:Static icons:Icons.left}" 
+                     TextColor="{StaticResource  yellow}"   
+                     FontFamily="{StaticResource Font}"   
+                      HorizontalOptions="Start" VerticalOptions="Center" 
+                      FontSize="20"    Clicked="Cancel_Clicked"
+                       BackgroundColor="{StaticResource Black}"  
+                       TranslationX="{Binding Source={x:Reference RootPage}, Path=Width}"
+                     />
+           
+            <Label Text="Tech Store" HorizontalOptions="Start" FontSize="25"  Margin="5,0,0,0"
+                   TextColor="{StaticResource white}" />
+
+            <Button  x:Name="SearchButton" Margin="0,10,0,0"
+                        Text="{x:Static icons:Icons.Search}" 
+                        TextColor="{StaticResource  yellow}"
+                        FontFamily="{StaticResource Font}"   
+                        HorizontalOptions="End" VerticalOptions="Center" 
+                        FontSize="20"     Clicked="Button_Clicked"
+                        BackgroundColor="{StaticResource Black}"  
+                         />
+            
+
+
+                
+           
+            
+            <ScrollView Grid.Row="1">
+            <CollectionView  x:Name="DisplayItems"
+                                 
+                             SelectionMode="Single" 
+                             SelectionChanged="DisplayItems_SelectionChanged">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2" 
+                                     VerticalItemSpacing="15" HorizontalItemSpacing="15"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                            <StackLayout HeightRequest="250" Padding="5">
+                                
+                                    <ImageButton Source="{Binding ImagePath}"    CornerRadius="5" Aspect="AspectFill"
+                                                 HeightRequest="120" WidthRequest="120"  
+                                                 HorizontalOptions="Center" VerticalOptions="Start"
+                                            />
+                                <Label Text="{Binding Price,StringFormat='{0:C}'}"  HorizontalOptions="Center"
+                                       TextColor="{StaticResource yellow}" FontSize="25" />
+
+                                <Label Text="{Binding Name}" 
+                                       TextColor="{StaticResource white}" FontSize="14"
+                                       HorizontalTextAlignment="Center"/>
+                                <Button Text="Details" WidthRequest="100" HeightRequest="35"
+                                       CornerRadius="10"  VerticalOptions="End" 
+                                        FontSize="14" BackgroundColor="{StaticResource Green}" />
+
+                            </StackLayout>
+                           
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            </ScrollView>
+
+            
+             </Grid>   
+    </ContentPage.Content>
+</ContentPage>

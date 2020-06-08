@@ -1,0 +1,16 @@
+C:\Users\charitynyanchera\Desktop\Github\TechStore\TechStore\TechStore\bin\Debug\netstandard2.0\TechStore.deps.json
+C:\Users\charitynyanchera\Desktop\Github\TechStore\TechStore\TechStore\bin\Debug\netstandard2.0\TechStore.dll
+C:\Users\charitynyanchera\Desktop\Github\TechStore\TechStore\TechStore\bin\Debug\netstandard2.0\ref\TechStore.dll
+C:\Users\charitynyanchera\Desktop\Github\TechStore\TechStore\TechStore\bin\Debug\netstandard2.0\TechStore.pdb
+C:\Users\charitynyanchera\Desktop\Github\TechStore\TechStore\TechStore\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\charitynyanchera\Desktop\Github\TechStore\TechStore\TechStore\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\charitynyanchera\Desktop\Github\TechStore\TechStore\TechStore\obj\Debug\netstandard2.0\Views\DetailsPage.xaml.g.cs
+C:\Users\charitynyanchera\Desktop\Github\TechStore\TechStore\TechStore\obj\Debug\netstandard2.0\Views\OverviewPage.xaml.g.cs
+C:\Users\charitynyanchera\Desktop\Github\TechStore\TechStore\TechStore\obj\Debug\netstandard2.0\TechStore.AssemblyInfoInputs.cache
+C:\Users\charitynyanchera\Desktop\Github\TechStore\TechStore\TechStore\obj\Debug\netstandard2.0\TechStore.AssemblyInfo.cs
+C:\Users\charitynyanchera\Desktop\Github\TechStore\TechStore\TechStore\obj\Debug\netstandard2.0\TechStore.csproj.CoreCompileInputs.cache
+C:\Users\charitynyanchera\Desktop\Github\TechStore\TechStore\TechStore\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\charitynyanchera\Desktop\Github\TechStore\TechStore\TechStore\obj\Debug\netstandard2.0\TechStore.dll
+C:\Users\charitynyanchera\Desktop\Github\TechStore\TechStore\TechStore\obj\Debug\netstandard2.0\ref\TechStore.dll
+C:\Users\charitynyanchera\Desktop\Github\TechStore\TechStore\TechStore\obj\Debug\netstandard2.0\TechStore.pdb
+C:\Users\charitynyanchera\Desktop\Github\TechStore\TechStore\TechStore\obj\Debug\netstandard2.0\TechStore.csprojAssemblyReference.cache

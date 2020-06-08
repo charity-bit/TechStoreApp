@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:icons="clr-namespace:TechStore.Fonts"
+             mc:Ignorable="d"
+             x:Class="TechStore.Views.DetailsPage"
+             BackgroundColor="{StaticResource  Black}"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid Padding="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Button  x:Name="Back"
+                        Text="{x:Static icons:Icons.left}"  Margin="-20,0,0,0"
+                        TextColor="{StaticResource  yellow}"
+                        FontFamily="{StaticResource Font}"  HorizontalOptions="Start"  
+                        VerticalOptions="Center" 
+                        FontSize="20"  
+                        BackgroundColor="{StaticResource Black}"  Clicked="Back_ButtonClicked" 
+                         />
+
+            <Label Text="{Binding Item.Name}"  HorizontalOptions="Center" Grid.Row="0"
+                   TextColor="{StaticResource white}"   Margin="42,0,0,0"
+                   FontAttributes="Bold" VerticalOptions="Center" FontSize="20"/>
+            <Image Source="{Binding Item.ImagePath}"  
+                         Aspect="AspectFit"  Grid.Row="1" HeightRequest="350"
+                        WidthRequest="344" 
+                      HorizontalOptions="Center" VerticalOptions="Center" />
+            <StackLayout Grid.Row="2" Padding="10" >
+                <Label Text="{Binding Item.Name }" TextColor="{StaticResource white}"
+                       FontSize="Subtitle"/>
+                <Label Text="{Binding Item.Storage}"  FontSize="Subtitle"
+                       TextColor="{StaticResource white}" />
+                <Label Text="{Binding Item.Camera }"  FontSize="Subtitle"
+                       TextColor="{StaticResource white}"/>
+                <Label Text="{Binding Item.RAM}"   FontSize="Subtitle"
+                       TextColor="{StaticResource white}" />
+                <Label Text="{Binding Item.Processor}"  FontSize="Subtitle"
+                       TextColor="{StaticResource white}" />
+
+                <Label Text="{Binding Item.Price,StringFormat='{0:C}'}" Margin="0,32,0,0"  
+                       FontSize="Small" HorizontalOptions="Center"
+                       TextColor="{StaticResource white}" />
+
+                <Button Text="Add to Basket" TextColor="{StaticResource Black}"  Margin="0,20,0,0" 
+                        HorizontalOptions="Center" 
+                        WidthRequest="235" HeightRequest="40" CornerRadius="10"
+                        BackgroundColor="{StaticResource yellow}"/>
+            </StackLayout>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
